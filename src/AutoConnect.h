@@ -10,6 +10,11 @@
 #ifndef _AUTOCONNECT_H_
 #define _AUTOCONNECT_H_
 
+#ifdef Arduino_h
+// arduino is not compatible with std::vector
+#undef min
+#undef max
+#endif
 #include <vector>
 #include <memory>
 #include <functional>
